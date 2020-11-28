@@ -298,6 +298,9 @@ def main():
       # Also reset states
       for event in pygame.event.get(): 
         if event.type == pygame.KEYDOWN:
+          if event.type == pygame.QUIT:
+            sys.exit()
+
           if event.key == pygame.K_RETURN:
             gameOver = False
             prevMoveSec = 0
