@@ -22,9 +22,7 @@ class Game:
       if flag:
         filledRowPos.append(i * 25)
 
-    if filledRowPos:
-      return filledRowPos
-    return False
+    return filledRowPos
 
   @staticmethod
   def clearRow(posYs, screen, background):
@@ -47,11 +45,11 @@ class Game:
     """
     verticalShift = len(posYs)
     for sq in Game.tetrominos:
-      if sq.pos[1] < min(posYs):
+      if sq.pos[1] < max(posYs):
         screen.blit(background, sq.pos, (150, 0, 26, 26))
 
     for sq in Game.tetrominos:
-      if sq.pos[1] < min(posYs):
+      if sq.pos[1] < max(posYs):
         for i in range(verticalShift):
           sq.move()
         screen.blit(sq.image, sq.pos)
