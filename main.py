@@ -74,7 +74,7 @@ def displayNextElement(element):
   """
     Display the next element for the player
   """
-  screen.fill(pygame.Color("black"), (450, 50, 149, 149))
+  screen.fill(pygame.Color("black"), (455, 50, 140, 140))
 
   # Position the element to the top right of the screen
   # Also make sure that the element is centered
