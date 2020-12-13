@@ -3,7 +3,7 @@ import re
 # Helper functions
 def formatSec(secs):
   """
-    Given some elapsed time in seconds output time in AB:CD:EF format
+    Given some elapsed time in seconds output time in HH:MM:SS format
   """
   def zeroPrefix(n):
     if n < 10:
